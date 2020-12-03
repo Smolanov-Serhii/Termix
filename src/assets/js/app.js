@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 
-    var mySwiper = new Swiper('.swiper-container', {
+    var mySwiper = new Swiper('.services .swiper-container', {
 
         // Navigation arrows
         navigation: {
@@ -10,6 +10,33 @@ $( document ).ready(function() {
         slidesPerView: 4,
         spaceBetween: 20,
     })
+
+    var videomain = new Swiper('.main-video__main-slider', {
+        fadeEffect: {
+            crossFade: true
+        },
+        effect: 'fade',
+        preloadImages: false,
+        lazy: true,
+        loadPrevNext: true,
+        slidesPerView: 1,
+        thumbs: {
+            swiper: {
+                el: '.main-video__nav-slider',
+                slidesPerView: 4,
+                slidesPerGroup: 1,
+                spaceBetween: 20,
+                lazy: true,
+                loadPrevNext: true,
+                navigation: {
+                    nextEl: '.main-video__next',
+                    prevEl: '.main-video__prev',
+                },
+            }
+        }
+    })
+
+
 
     jQuery('img.svg').each(function() {
         var $img = jQuery(this);
@@ -55,5 +82,25 @@ $( document ).ready(function() {
         }, 300)
 
     });
+    if ($('.partner').length > 0){
+        $('.tab-device').click(function() {
+            data = $(this)
+            $(this).closest('.content-block__tabs').find('.tab-manual').removeClass('active');
+            $(this).addClass('active');
+            $(this).closest('.content-block').find('.content-block__manuals').fadeOut(300);
+            setTimeout(function () {
+                data.closest('.content-block').find('.content-block__device').fadeIn(300);
+            }, 300)
 
+        });
+        $('.tab-manual').click(function() {
+            data = $(this);
+            $(this).closest('.content-block__tabs').find('.tab-device').removeClass('active');
+            $(this).addClass('active');
+            $(this).closest('.content-block').find('.content-block__device').fadeOut(300);
+            setTimeout(function () {
+                data.closest('.content-block').find('.content-block__manuals').fadeIn(300);
+            }, 300)
+        });
+    }
 });
