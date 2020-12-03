@@ -1,0 +1,15 @@
+@media all and (min-width: 1697px){
+  .about-service{
+    overflow: visible!important;
+    &__title-bg{
+      top: -54px!important;
+    }
+  }
+}
+@media all and (max-width: 1440px){
+  .main-header{
+    .under-navigate.container{
+      padding-right: 0;
+    }
+  }
+}
