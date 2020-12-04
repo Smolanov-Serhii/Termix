@@ -13,3 +13,41 @@
     }
   }
 }
+@media all and (max-width: 1400px){
+  html{
+    font-size: 57.5% !important;
+  }
+  .main-slider{
+    &__slide{
+      &:first-child{
+        .main-slider__title{
+          font-size: 3.8rem;
+          line-height: 4.8rem;
+        }
+      }
+    }
+  }
+}
+@media all and (max-width: 1250px){
+  html{
+    font-size: 52.5% !important;
+  }
+  .main-header{
+    &__navigate{
+      .main-info{
+        &__button-menu{
+          display: flex;
+          justify-content: space-around;
+          .button-menu__item{
+            &:first-child{
+              margin: auto 10px;
+            }
+            &:last-child{
+              margin: auto 10px auto 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
