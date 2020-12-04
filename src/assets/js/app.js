@@ -7,8 +7,43 @@ $( document ).ready(function() {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+        // watchOverflow: true,
         slidesPerView: 4,
         spaceBetween: 20,
+    })
+
+    var aboutSwiper = new Swiper('.about-company .swiper-container', {
+
+        watchOverflow: true,
+        slidesPerView: 6,
+        spaceBetween: 20,
+        breakpoints: {
+          992: {
+
+          },
+          768: {
+
+          }
+        },
+    })
+
+    var brandsSwiper = new Swiper('.main-brands .main-brands__container', {
+
+        watchOverflow: true,
+        slidesPerView: 6,
+        spaceBetween: 50,
+        navigation: {
+            nextEl: '.main-brands__next',
+            prevEl: '.main-brands__prev',
+        },
+        breakpoints: {
+            992: {
+
+            },
+            768: {
+
+            }
+        },
     })
 
     var videomain = new Swiper('.main-video__main-slider', {
@@ -72,6 +107,16 @@ $( document ).ready(function() {
 
     });
 
+    if ($('.main-news').length > 0){
+        $('.main-news__btn').click(function() {
+            $(this).closest('.main-news').find('.main-news__container').addClass('show-all');
+            setTimeout(function () {
+                data.closest('.content-block').find('.content-block__device').fadeIn(300);
+            }, 300)
+            $(this).fadeOut(300);
+        });
+
+    }
     $('.about-service__tab-itm').click(function() {
         data = $(this).data('id');
         $('.about-service__tab-itm').removeClass('tab-itm-active');
