@@ -1675,7 +1675,7 @@ body {
 
     }
     &__slide-img{
-        min-height: 200px;
+        max-height: 200px;
         height: 200vw * $px;
         border-radius: 10px;
         background-size: cover;
