@@ -1,4 +1,18 @@
 $( document ).ready(function() {
+    if ($(window).width() <= 768) {
+        var topSwiper = new Swiper('.main-slider', {
+            watchOverflow: true,
+            slidesPerView: 1,
+            spaceBetween: 40,
+        })
+
+        var categorySwiper = new Swiper('.category__list', {
+            watchOverflow: true,
+            slidesPerView: 2.5,
+            spaceBetween: 20,
+        })
+    }
+
 
     var mySwiper = new Swiper('.services .swiper-container', {
 

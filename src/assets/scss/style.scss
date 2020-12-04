@@ -4,7 +4,7 @@
 @import "vars";
 @import "animation";
 @import "swiper";
-@import "media";
+
 
 html{
     font-size: 62.5%;
@@ -44,6 +44,12 @@ body {
     margin: auto;
 }
 .main-header{
+    &__mobile-burger{
+        display: none;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
     .under-navigate{
         height: 100%;
         display: flex;
@@ -188,6 +194,7 @@ body {
                     padding-left: 15px;
                     &::placeholder{
                         color: white;
+                        font-size: 1.8rem;
                     }
                 }
                 button {
@@ -434,8 +441,10 @@ body {
 .main-slider{
     position: relative;
     margin-top: 20px;
+    overflow: visible;
     &__list{
         //display: flex;
+        display: block;
     }
     &__slide{
         background-repeat: no-repeat;
@@ -525,6 +534,7 @@ body {
         bottom: 60px;
         left: 96px;
         display: flex;
+        z-index: 1;
         a{
             width: 183px;
             height: 56px;
@@ -621,6 +631,7 @@ body {
         text-align: center;
         margin-top: 108px;
         position: relative;
+        z-index: 2;
     }
     &__title-bg{
         text-align: center;
@@ -628,8 +639,9 @@ body {
         width: 100%;
         display: flex;
         justify-content: center;
-        top: 23px;
+        bottom: -26px;
         left: 0;
+        z-index: -1;
     }
     &__tabs{
         width: 664px;
@@ -678,6 +690,7 @@ body {
     &__content-item{
         display: none;
         position: relative;
+        min-height: 267px;
         &.active-article{
             display: block;
         }
@@ -856,10 +869,13 @@ body {
         position: relative;
     }
     &__list{
+    }
+    &__list-wrapper{
         display: block;
         margin-top: 30px;
         margin-left: -10px;
         margin-right: -10px;
+        width: calc(100% + 20px);
         &:after{
             clear: both;
             content: "";
@@ -1998,3 +2014,4 @@ body {
     }
 }
 
+@import "media";

@@ -61,6 +61,11 @@
             </nav>
             <div class="main-header__navigate">
                 <div class="container main-info">
+                    <div class="main-header__mobile-burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                     <div class="main-info__logo">
                         <a class="main-info__logo-lnk" href="#"><img src="assets/images/logo.svg" alt=""></a>
                     </div>
@@ -140,9 +145,9 @@
             </nav>
         </header>
 
-        <div class="main-slider container">
-            <div class="main-slider__list">
-                <div class="main-slider__slide" style="background-image: url('assets/images/top_slider_1.jpg')">
+        <div class="main-slider container swiper-container">
+            <div class="main-slider__list swiper-wrapper">
+                <div class="main-slider__slide swiper-slide" style="background-image: url('assets/images/top_slider_1.jpg')">
                     <div class="main-slider__subtitle">Удобный сервис по подбору и установке оборудования в любой точке Украины</div>
                     <div class="main-slider__title">Сервис по подбору оборудования и строительству Wellness объектов в любой точке Украины</div>
         <!--            <a href="#" class="main-slider__detail">-->
@@ -152,7 +157,7 @@
         <!--                </svg>-->
         <!--            </a>-->
                 </div>
-                <div class="main-slider__slide" style="background-image: url('assets/images/top_slider_2.jpg')">
+                <div class="main-slider__slide swiper-slide" style="background-image: url('assets/images/top_slider_2.jpg')">
                     <div class="main-slider__subtitle">Скидки 30% весь август!</div>
                     <div class="main-slider__title white">Все что нужно для похода в баню</div>
                     <a href="#" class="main-slider__detail white">
@@ -162,7 +167,7 @@
                         </svg>
                     </a>
                 </div>
-                <div class="main-slider__slide" style="background-image: url('assets/images/top_slider_3.jpg')">
+                <div class="main-slider__slide swiper-slide" style="background-image: url('assets/images/top_slider_3.jpg')">
                     <div class="main-slider__subtitle">Скидки до 50% на тепло!</div>
                     <div class="main-slider__title black">Дарим возможжность не думать о холоде</div>
                     <a href="#" class="main-slider__detail black">
@@ -235,8 +240,9 @@
         </div>
         <div class="about-service">
             <div class="about-service__description">
-                <div class="about-service__title-bg title-bg">Краткое ознакомление с сервисом</div>
-                <div class="about-service__title title-section">Краткое ознакомление с сервисом</div>
+        
+                <div class="about-service__title title-section">Краткое ознакомление с сервисом
+                    <div class="about-service__title-bg title-bg">Краткое ознакомление с сервисом</div></div>
             </div>
             <div class="about-service__tabs">
                 <div class="about-service__tab-itm tab-itm-active" data-id="article-1">
@@ -369,68 +375,70 @@
                 <div class="category__title-bg title-bg">
                     Категории товаров
                 </div>
-                <ul class="category__list">
-                    <li class="category__item">
-                        <a href="" class="category__lnk">
-                            <div class="category__item-image">
-                                <div class="category__item-hover" style="background-image: url(assets/images/cat_1.jpg)"></div>
-                            </div>
-                            <div class="category__item-title">
-                                Оборудование для бани и сауны
-                            </div>
-                        </a>
-                    </li>
-                    <li class="category__item">
-                        <a href="" class="category__lnk">
-                            <div class="category__item-image">
-                                <div class="category__item-hover" style="background-image: url(assets/images/cat_2.jpg)"></div>
-                            </div>
-                            <div class="category__item-title">
-                                Оборудование для хамама
-                            </div>
-                        </a>
-                    </li>
-                    <li class="category__item">
-                        <a href="" class="category__lnk">
-                            <div class="category__item-image">
-                                <div class="category__item-hover" style="background-image: url(assets/images/cat_3.jpg)"></div>
-                            </div>
-                            <div class="category__item-title">
-                                Отопительное оборудование
-                            </div>
-                        </a>
-                    </li>
-                    <li class="category__item">
-                        <a href="" class="category__lnk">
-                            <div class="category__item-image">
-                                <div class="category__item-hover" style="background-image: url(assets/images/cat_4.jpg)"></div>
-                            </div>
-                            <div class="category__item-title">
-                                Дымоходы
-                            </div>
-                        </a>
-                    </li>
-                    <li class="category__item">
-                        <a href="" class="category__lnk">
-                            <div class="category__item-image">
-                                <div class="category__item-hover" style="background-image: url(assets/images/cat_5.jpg)"></div>
-                            </div>
-                            <div class="category__item-title">
-                                Товары для дома и интерьера
-                            </div>
-                        </a>
-                    </li>
-                    <li class="category__item">
-                        <a href="" class="category__lnk">
-                            <div class="category__item-image">
-                                <div class="category__item-hover" style="background-image: url(assets/images/cat_6.png)"></div>
-                            </div>
-                            <div class="category__item-title">
-                                Акции и скидки
-                            </div>
-                        </a>
-                    </li>
-                </ul>
+                <div class="category__list swiper-container">
+                    <ul class="category__list-wrapper swiper-wrapper">
+                        <li class="category__item swiper-slide">
+                            <a href="" class="category__lnk">
+                                <div class="category__item-image">
+                                    <div class="category__item-hover" style="background-image: url(assets/images/cat_1.jpg)"></div>
+                                </div>
+                                <div class="category__item-title">
+                                    Оборудование для бани и сауны
+                                </div>
+                            </a>
+                        </li>
+                        <li class="category__item swiper-slide">
+                            <a href="" class="category__lnk">
+                                <div class="category__item-image">
+                                    <div class="category__item-hover" style="background-image: url(assets/images/cat_2.jpg)"></div>
+                                </div>
+                                <div class="category__item-title">
+                                    Оборудование для хамама
+                                </div>
+                            </a>
+                        </li>
+                        <li class="category__item swiper-slide">
+                            <a href="" class="category__lnk">
+                                <div class="category__item-image">
+                                    <div class="category__item-hover" style="background-image: url(assets/images/cat_3.jpg)"></div>
+                                </div>
+                                <div class="category__item-title">
+                                    Отопительное оборудование
+                                </div>
+                            </a>
+                        </li>
+                        <li class="category__item swiper-slide">
+                            <a href="" class="category__lnk">
+                                <div class="category__item-image">
+                                    <div class="category__item-hover" style="background-image: url(assets/images/cat_4.jpg)"></div>
+                                </div>
+                                <div class="category__item-title">
+                                    Дымоходы
+                                </div>
+                            </a>
+                        </li>
+                        <li class="category__item swiper-slide">
+                            <a href="" class="category__lnk">
+                                <div class="category__item-image">
+                                    <div class="category__item-hover" style="background-image: url(assets/images/cat_5.jpg)"></div>
+                                </div>
+                                <div class="category__item-title">
+                                    Товары для дома и интерьера
+                                </div>
+                            </a>
+                        </li>
+                        <li class="category__item swiper-slide">
+                            <a href="" class="category__lnk">
+                                <div class="category__item-image">
+                                    <div class="category__item-hover" style="background-image: url(assets/images/cat_6.png)"></div>
+                                </div>
+                                <div class="category__item-title">
+                                    Акции и скидки
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="category__rec container">
                 <div class="category__rec-list">
