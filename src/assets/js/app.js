@@ -4,17 +4,47 @@ $( document ).ready(function() {
             watchOverflow: true,
             slidesPerView: 1,
             spaceBetween: 40,
-        })
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
 
         var categorySwiper = new Swiper('.category__list', {
-            watchOverflow: true,
-            slidesPerView: 2.5,
+            slidesPerView: 3.2,
             spaceBetween: 20,
-        })
+            breakpoints: {
+                600: {
+                    slidesPerView: 2.5,
+                },
+                500: {
+                    slidesPerView: 2.2,
+                },
+                300: {
+                    slidesPerView: 1.2,
+                    spaceBetween: 10,
+                },
+
+            },
+        });
+        var categorySwiper = new Swiper('.partner .partner__content', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            pagination: {
+                el: '.partner__pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 1,
+                },
+            },
+        });
     }
 
 
-    var mySwiper = new Swiper('.services .swiper-container', {
+
+    var ServiceSwiper = new Swiper('.services .swiper-container', {
 
         // Navigation arrows
         navigation: {
@@ -24,20 +54,23 @@ $( document ).ready(function() {
         // watchOverflow: true,
         slidesPerView: 4,
         spaceBetween: 20,
-    })
-
-    var aboutSwiper = new Swiper('.about-company .swiper-container', {
-
-        watchOverflow: true,
-        slidesPerView: 6,
-        spaceBetween: 20,
         breakpoints: {
-          992: {
-
-          },
-          768: {
-
-          }
+            1024: {
+                slidesPerView: 4,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            600: {
+                slidesPerView: 2,
+            },
+            500: {
+                slidesPerView: 1,
+            },
+            200: {
+                slidesPerView: 1.2,
+                spaceBetween: 10,
+            }
         },
     })
 
@@ -45,18 +78,22 @@ $( document ).ready(function() {
 
         watchOverflow: true,
         slidesPerView: 6,
-        spaceBetween: 50,
+        spaceBetween: 20,
+        pagination: {
+            el: '.main-brands__pagination',
+            clickable: true,
+        },
         navigation: {
             nextEl: '.main-brands__next',
             prevEl: '.main-brands__prev',
         },
         breakpoints: {
-            992: {
-
+            1024: {
+                slidesPerView: 4,
             },
-            768: {
-
-            }
+            240: {
+                slidesPerView: 3,
+            },
         },
     })
 
@@ -69,6 +106,15 @@ $( document ).ready(function() {
         lazy: true,
         loadPrevNext: true,
         slidesPerView: 1,
+        breakpoints: {
+            240: {
+                pagination: {
+                    el: '.main-video__pagination',
+                    clickable: true,
+                },
+                slidesPerView: 1,
+            },
+        },
         thumbs: {
             swiper: {
                 el: '.main-video__nav-slider',
