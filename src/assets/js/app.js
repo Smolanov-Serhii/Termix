@@ -61,6 +61,15 @@ $( document ).ready(function() {
         },
     });
 
+    var catsorted = new Swiper('.category-sorted__container', {
+        slidesPerView: 4,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: '.services__next',
+            prevEl: '.services__prev',
+        },
+    });
+
     var ServiceSwiper = new Swiper('.services .swiper-container', {
 
         // Navigation arrows

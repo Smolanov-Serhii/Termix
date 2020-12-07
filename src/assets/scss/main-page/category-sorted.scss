@@ -1,0 +1,100 @@
+.category-sorted{
+  background-color: #F9F9F9;
+  padding-bottom: 210px;
+  &__header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+  }
+  &__tabs{
+    display: flex;
+    justify-content: center;
+    font-family: ProximaNova-Light;
+    font-size: 2.0rem;
+    line-height: 2.4rem;
+    border-bottom: 1px solid #828282;
+  }
+  &__tab-item{
+    display: inline-flex;
+    cursor: pointer;
+    &:first-child{
+      margin-right: 45px;
+    }
+    &:last-child{
+      margin-left: 45px;
+    }
+    &.active{
+      border-bottom: 1px solid $orange-color;
+      font-family: ProximaNova-Bold;
+      color: $orange-color;
+      margin-bottom: -1px;
+    }
+  }
+  .services__navigation{
+    margin: -200px auto 0 auto;
+  }
+  &__container{
+    padding: 0;
+    max-width: 1220px;
+    width: calc(100% - 220px);
+  }
+  &__wrapper{
+
+  }
+  &__item{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    background: #FFFFFF;
+    border: 1px solid #E8E8E8;
+    border-radius: 10px;
+  }
+  &__item-img{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 150px;
+  }
+  &__item-cont{
+    display: flex;
+    flex-direction: column;
+    .subtitle{
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+      color: #000000;
+      margin-top: 20px;
+    }
+    .title{
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+      color: #333333;
+      font-family: ProximaNova-Bold;
+      margin-top: 10px;
+    }
+    .cont-desc{
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      img{
+        height: auto;
+      }
+      .price{
+        display: flex;
+        flex-direction: column;
+        span{
+          font-size: 1.4rem;
+          line-height: 1.7rem;
+          color: #48B514;
+          font-family: ProximaNova-Light;
+        }
+        .price-value{
+          font-size: 2.2rem;
+          line-height: 2.7rem;
+          color: #000000;
+          font-family: ProximaNova-Bold;
+        }
+      }
+    }
+  }
+}

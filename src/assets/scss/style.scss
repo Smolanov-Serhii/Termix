@@ -40,10 +40,50 @@ body {
     }
 
 }
+.breadcrumbs{
+    display: flex;
+    padding: 0 56px 10px 56px;
+    border-bottom: 1px solid #E9E9E9;
+    margin-top: -10px;
+
+    &__list{
+        display: flex;
+    }
+    &__item{
+        padding: 0 0 0 20px;
+        display: flex;
+        align-items: center;
+        span{
+            color: $orange-color;
+            font-size: 1.4rem;
+            line-height: 1.7rem;
+        }
+        a{
+            display: flex;
+            align-items: center;
+            color: $orange-color;
+            font-size: 1.4rem;
+            line-height: 1.7rem;
+            &:after{
+                display: block;
+                width: 16px;
+                height: 16px;
+                background-image: url(../images/bread-arrow.svg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                content: "";
+                margin-left: 20px;
+            }
+        }
+    }
+}
 
 // Главная страница
 
 @import "main-page/main-page";
+@import "main-page/ceo";
+@import "main-page/category-sorted";
 
 // Страница "Карточка диллера"
 
@@ -57,3 +97,11 @@ body {
 
 @import "about/about-page";
 @import "media";
+
+// Страница категорий
+
+@import "category-page/category-block";
+
+// Страница товара
+
+@import "single-product/single-product";
