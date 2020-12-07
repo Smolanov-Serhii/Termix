@@ -40,9 +40,26 @@ $( document ).ready(function() {
                 },
             },
         });
+
     }
 
+    var dealerslider = new Swiper('.dealer-projects .dealer-projects__container', {
+        slidesPerView: 3,
+        spaceBetween: 50,
+        navigation: {
+            nextEl: '.dealer-projects .services__next',
+            prevEl: '.dealer-projects .services__prev',
+        },
+    });
 
+    var dealerslider = new Swiper('.dealer-sertificates .dealer-sertificates__container', {
+        slidesPerView: 4,
+        spaceBetween: 50,
+        navigation: {
+            nextEl: '.dealer-sertificates .services__next',
+            prevEl: '.dealer-sertificates .services__prev',
+        },
+    });
 
     var ServiceSwiper = new Swiper('.services .swiper-container', {
 

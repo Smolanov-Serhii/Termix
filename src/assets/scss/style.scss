@@ -40,6 +40,20 @@ body {
     }
 
 }
-@import "main";
-@import "about";
+
+// Главная страница
+
+@import "main-page/main-page";
+
+// Страница "Карточка диллера"
+
+@import "dealer-cards/dealer-cards";
+@import "dealer-cards/dealer-services";
+@import "dealer-cards/dealer-projects";
+@import "dealer-cards/dealer-sertificates";
+@import "dealer-cards/dealer-recall";
+
+// Страница "О нас"
+
+@import "about/about-page";
 @import "media";

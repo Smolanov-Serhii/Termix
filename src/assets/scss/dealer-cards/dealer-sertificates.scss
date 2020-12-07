@@ -1,0 +1,31 @@
+.dealer-sertificates {
+  position: relative;
+  padding-top: 90px;
+  &__title{
+    position: relative;
+    margin-left: 55px;
+    z-index: 2;
+  }
+  &__subtitle{
+    position: absolute;
+    top: -53px;
+    left: -5px;
+    font-size: 10rem;
+    line-height: 12.2rem;
+    z-index: -1;
+  }
+  &__slide{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 183vw * $px;
+  }
+  &__container{
+    width: calc(100% - 140px);
+    margin-top: 66px;
+  }
+  .services__navigation{
+    padding: 0;
+    margin: -100px auto 150px auto;
+  }
+}
