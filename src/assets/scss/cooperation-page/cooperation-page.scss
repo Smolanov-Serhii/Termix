@@ -1,0 +1,113 @@
+.cooperation{
+  .about-company__wrapper{
+    margin-bottom: 80px;
+    .about-company__desc{
+      padding-right: 40px;
+      border-right: 1px solid $orange-color;
+    }
+  }
+  .main-brands__container{
+    margin: 20px 104px;
+  }
+  .main-brands__navigation{
+    margin-top: -100px;
+    margin-bottom: 30px;
+  }
+}
+.cooperation-about{
+  &__title{
+    position: relative;
+    z-index: 2;
+    margin-top: 110px;
+    margin-left: 50px;
+    font-size: 3.6rem;
+    line-height: 4.4rem;
+  }
+  &__subtitle{
+    z-index: -1;
+    position: absolute;
+    top: -53px;
+    left: -5px;
+  }
+  &__container{
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-between;
+    .cooperation-about__title{
+      font-size: 20px;
+      line-height: 24px;
+      font-family: ProximaNova-Bold;
+      color: #33353D;
+      margin-top: 0;
+      padding-left: 0;
+      margin-left: 0;
+      margin-bottom: 20px;
+    }
+    .about-company__content{
+      margin-top: 0;
+      p{
+        font-size: 1.6rem;
+        line-height: 150%;
+        text-align: justify;
+        color: #828282;
+      }
+    }
+    .about-company__wrapper{
+      margin-right: 0;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 0 30px 0;
+    }
+    .about-company__desc{
+      width: 525vw * $px;
+    }
+    .about-company__video{
+      width: 454vw * $px;
+      height: 353vw * $px;
+      margin-top: 0;
+      margin-left: 40px;
+      max-height: 353px;
+      min-width: auto;
+      min-height: auto;
+    }
+  }
+  &__sidebar{
+    width: auto;
+  }
+  &__nav{
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 40px;
+  }
+  &__nav-item{
+    border-bottom: 1px solid transparent;
+    margin-bottom: 20px;
+    transition: $hover-transition;
+    a{
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+      color: #828282;
+      font-weight: normal;
+      transition: color $hover-transition;
+    }
+    &.active{
+      border-bottom: 1px solid $orange-color;
+      a{
+        font-weight: 600;
+        color: $orange-color;
+      }
+    }
+    &:hover{
+      border-bottom: 1px solid $orange-color;
+      a{
+        font-weight: 600;
+        color: $orange-color;
+      }
+    }
+  }
+  &__content{
+    width: calc(100% - 280px);
+    padding-left: 40px;
+  }
+}

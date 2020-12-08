@@ -1,0 +1,49 @@
+.cooperation-why{
+  padding-right: 129px;
+  margin-bottom: 50px;
+  &__title{
+    font-size: 20px;
+    line-height: 24px;
+    font-family: ProximaNova-Bold;
+    color: #33353D;
+    margin-top: 0;
+    padding-left: 0;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+  .about-company{
+    &__slider{
+      &:after{
+        display: none;
+      }
+    }
+    &__wrapper{
+
+    }
+    &__slide{
+      width: 25%;
+      border-right: none;
+      padding-bottom: 30px;
+      .slide-text{
+        max-width: 206px;
+        padding-top: 0;
+      }
+      &:nth-child(2), &:nth-child(5){
+        width: 50%;
+        border-right: 1px solid #DBDBDB;
+        border-left: 1px solid #DBDBDB;
+      }
+      &:nth-child(1), &:nth-child(2), &:nth-child(3){
+        border-bottom: 1px solid #DBDBDB;
+        padding-bottom: 50px;
+        .slide-icon{
+          margin-top: 0;
+        }
+      }
+      .slide-icon{
+        height: 90px;
+        margin-top: 36px;
+      }
+    }
+  }
+}

@@ -226,6 +226,10 @@
           box-shadow: -10px -10px 30px #2C2C32, 10px 10px 30px rgba(34, 34, 34, 0.4);
           border-radius: 3px;
           margin: 0 20px;
+          svg{
+            width: 15px;
+            height: 15px;
+          }
 
           &:first-child {
             margin-left: 40px;
@@ -260,6 +264,8 @@
             line-height: 2.2rem;
             transition: $hover-transition;
             cursor: pointer;
+            display: flex;
+            align-items: center;
 
             img, svg {
               margin-right: 4px;
@@ -343,7 +349,7 @@
     }
 
     &__item {
-      min-width: 208px;
+      min-width: 210px;
       margin: 0;
       padding: 14px 56px 14px 20px;
       position: relative;

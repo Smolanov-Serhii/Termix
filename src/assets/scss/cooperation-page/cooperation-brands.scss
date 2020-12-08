@@ -1,0 +1,35 @@
+.cooperation-brands{
+  padding: 30px 50px 25px 0;
+  position: relative;
+  margin-bottom: 20px;
+  &:before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% + 40px);
+    content: "";
+    display: block;
+    border-top: 1px solid $orange-color;
+    margin-right: -40px;
+  }
+  &:after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: calc(100% + 40px);
+    content: "";
+    display: block;
+    border-bottom: 1px solid $orange-color;
+    margin-right: -40px;
+  }
+  &__title{
+    font-size: 20px;
+    line-height: 24px;
+    font-family: ProximaNova-Bold;
+    color: #33353D;
+    margin-top: 0;
+    padding-left: 0;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+}

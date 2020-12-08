@@ -1,3 +1,4 @@
+
 $( document ).ready(function() {
     if ($(window).width() <= 768) {
         var topSwiper = new Swiper('.main-slider', {
@@ -122,6 +123,29 @@ $( document ).ready(function() {
         navigation: {
             nextEl: '.main-brands__next',
             prevEl: '.main-brands__prev',
+        },
+        breakpoints: {
+            1024: {
+                slidesPerView: 4,
+            },
+            240: {
+                slidesPerView: 3,
+            },
+        },
+    })
+
+    var coopbrendsSwiper = new Swiper('.cooperation .main-brands__container', {
+
+        watchOverflow: true,
+        slidesPerView: 6,
+        spaceBetween: 20,
+        pagination: {
+            el: '.cooperation .main-brands__pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.cooperation .main-brands__next',
+            prevEl: '.cooperation .main-brands__prev',
         },
         breakpoints: {
             1024: {
@@ -292,4 +316,71 @@ $( document ).ready(function() {
             $('.single-params__tabs-item').removeClass('active');
         }
     }
+
+    if ($('.service-center-list').length > 0){
+        $('.service-list__header').click(function() {
+            $(this).toggleClass('active');
+            $(this).closest('.service-list__item').find('.service-list__content').fadeToggle(300);
+        });
+    }
+
+    if ($('.zakaz-service__form').length > 0){
+        $('.zakaz-service__form select').selectric();
+    }
+
+    if ($('.service-map').length > 0){
+        initMap()
+    }
+
+    function initMap() {
+        var uluru = {lat: 50.4568971, lng: 30.5029689};
+        var image = '/assets/images/marker.png';
+
+        var map = new google.maps.Map(document.getElementById('service-map'), {
+            zoom: 10,
+            center: uluru,
+            scrollwheel: false,
+            styles : [
+                {"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#544328"}]},
+                {"featureType":"landscape","elementType":"all","stylers":[{"color":"#f6f6f6"}]},
+
+                {"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},
+                {"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},
+                {"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},
+                {"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},
+                {"featureType":"road.local","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},
+                {"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},
+                {
+                    featureType: "administrative.country",
+                    elementType: "geometry",
+                    stylers: [
+                        { color: "#989898" }
+                    ]
+                },
+                {"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"on"}]},
+                {"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},
+                {"featureType":"water","elementType":"all","stylers":[{"color":"#E5E5E5"},{"visibility":"on"}]}
+            ]
+        });
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map: map,
+            icon: image
+
+        });
+    }
+
+    if ($('.cooperation-about__container').length > 0){
+        $('.cooperation-about__nav-item a').click(function() {
+            $("body").on('click', '[href*="#"]', function(e){
+                var fixed_offset = 100;
+                $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1000);
+                e.preventDefault();
+            });
+            $('.cooperation-about__nav-item').removeClass('active');
+            $(this).closest('.cooperation-about__nav-item').addClass('active');
+        });
+
+    }
+
 });
