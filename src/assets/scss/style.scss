@@ -4,6 +4,7 @@
 @import "vars";
 @import "animation";
 @import "swiper";
+@import "selectric";
 
 
 
@@ -53,6 +54,9 @@ body {
         padding: 0 0 0 20px;
         display: flex;
         align-items: center;
+        &:first-child{
+            padding: 0;
+        }
         span{
             color: $orange-color;
             font-size: 1.4rem;
@@ -108,3 +112,9 @@ body {
 @import "single-product/single-product";
 @import "single-product/single-cart";
 @import "single-product/single-params";
+
+//Страница Сервисного центра
+
+@import "service-center/service-center-desc";
+@import "service-center/service-center-list";
+@import "service-center/zakaz-service";

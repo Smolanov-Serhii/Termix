@@ -1,0 +1,143 @@
+.service-center-list{
+  margin-top: 100px;
+  &__title{
+    position: relative;
+    z-index: 2;
+    margin-left: 50px;
+  }
+  &__subtitle{
+    position: absolute;
+    left: -5px;
+    top: -53px;
+    z-index: -1;
+    font-size: 10rem;
+    line-height: 12.2rem;
+    @media all and (max-width: 1400px) {
+      font-size: 100vw * $px;
+      line-height: 122vw * $px;
+    }
+  }
+  &__container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+    .service-list{
+
+      &__item{
+        display: flex;
+        flex-direction: column;
+        &:first-child{
+          .service-list__header{
+            margin-top: 70px;
+          }
+        }
+      }
+      &__header{
+        margin-top: 20px;
+        border: 1px solid #F4A343;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        z-index: 1;
+        background-color: #FFFFFF;
+        cursor: pointer;
+        transition: $hover-transition;
+        .icon-triger{
+          svg{
+            circle, path{
+              transition: $hover-transition;
+            }
+          }
+        }
+        &:hover, &.active{
+          background-color: $orange-color;
+          color: white;
+          .icon-triger{
+            svg{
+              circle{
+                fill: white;
+              }
+              path{
+                stroke: $orange-color;
+              }
+            }
+          }
+        }
+        .icon-triger{
+          padding: 0 20px 0 40px;
+          margin: 10px 0;
+          display: flex;
+          align-items: center;
+          border-right: 1px solid $orange-color;
+        }
+      }
+      &__title{
+        font-family: ProximaNova-Bold;
+        font-size: 2rem;
+        line-height: 2.3rem;
+        margin-left: 20px;
+      }
+      &__content{
+        background-color: #F9F9F9;
+        margin-top: -10px;
+        display: none;
+        .acardeon-container{
+          padding: 34px 40px 0 78px;
+          .price{
+            padding-top: 50px;
+            &-item-group{
+              &:first-child{
+                .price-header{
+                  background-color: #33353D;
+                  color: white;
+                }
+              }
+            }
+            &-header{
+              display: flex;
+              justify-content: space-between;
+              background-color: #E5E5E5;
+              border-radius: 10px;
+
+              padding: 15px 40px;
+              font-size: 2rem;
+              line-height: 2.3rem;
+              font-weight: bolder;
+            }
+            &-item-group{
+              .price-item{
+                display: flex;
+                justify-content: space-between;
+                font-size: 1.8rem;
+                line-height: 2.1rem;
+                padding: 20px 40px 0 40px;
+                font-weight: 400;
+                &:last-child{
+                  padding-bottom: 40px;
+                }
+              }
+            }
+          }
+          &.video{
+            display: flex;
+            padding: 50px 77px 40px 120px;
+            .content-text{
+              width: calc(100% - 290px);
+              padding-right: 100px;
+              display: flex;
+              align-items: center;
+            }
+            .content__video{
+              width: 290px;
+              height: 190px;
+              video{
+                height: 100%;
+                width: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

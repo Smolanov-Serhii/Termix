@@ -1,3 +1,4 @@
+
 $( document ).ready(function() {
     if ($(window).width() <= 768) {
         var topSwiper = new Swiper('.main-slider', {
@@ -292,4 +293,16 @@ $( document ).ready(function() {
             $('.single-params__tabs-item').removeClass('active');
         }
     }
+
+    if ($('.service-center-list').length > 0){
+        $('.service-list__header').click(function() {
+            $(this).toggleClass('active');
+            $(this).closest('.service-list__item').find('.service-list__content').fadeToggle(300);
+        });
+    }
+
+    if ($('.zakaz-service__form').length > 0){
+        $('.zakaz-service__form select').selectric();
+    }
+
 });
