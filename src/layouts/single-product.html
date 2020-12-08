@@ -8,8 +8,28 @@
 
     {{> header }}
 
+    {{> breadcrumbs }}
 
-    {{> services }}
+    {{> single-cart }}
+
+    {{> single-params }}
+
+
+
+    <div class="single-container">
+        <div class="single-container__services-slider container">
+            Услуги по этой категории
+        </div>
+
+        {{> services-slider }}
+
+        <div class="single-container__items-slider container">
+            Похожие товары
+        </div>
+
+        {{> items-slider }}
+
+    </div>
 
 
     {{> ceo }}

@@ -101,7 +101,10 @@ body {
 // Страница категорий
 
 @import "category-page/category-block";
+@import "category-page/category-rec";
 
 // Страница товара
 
 @import "single-product/single-product";
+@import "single-product/single-cart";
+@import "single-product/single-params";
