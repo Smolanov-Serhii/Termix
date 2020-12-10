@@ -1,10 +1,23 @@
 .dealer-sertificates {
   position: relative;
-  padding-top: 90px;
+  padding-top: 102px;
+  @media all and (max-width: 1024px) {
+    padding-top: 40px;
+  }
+  @media all and (max-width: 1024px) {
+    padding-top: 60px;
+  }
+  @media all and (max-width: 500px) {
+    padding-right: 17px;
+    padding-left: 17px;
+  }
   &__title{
     position: relative;
     margin-left: 55px;
     z-index: 2;
+    @media all and (max-width: 1024px) {
+      margin-left: 0;
+    }
   }
   &__subtitle{
     position: absolute;
@@ -19,13 +32,31 @@
     background-size: contain;
     background-position: center;
     height: 183vw * $px;
+    @media all and (max-width: 1024px) {
+      height: 150px;
+    }
+    @media all and (max-width: 500px) {
+      border-radius: 3px;
+      min-height: 84px;
+      height: 84vw * $pxm;
+    }
   }
   &__container{
     width: calc(100% - 140px);
-    margin-top: 66px;
+    margin-top: 38px;
+    @media all and (max-width: 1024px) {
+      margin: 20px 0 0 0 ;
+      width: 100%;
+    }
+    @media all and (max-width: 500px) {
+      margin: 20px 0 0 0 ;
+    }
   }
   .services__navigation{
     padding: 0;
-    margin: -100px auto 150px auto;
+    margin: -100vw * $px auto 150vw * $px auto;
+    @media all and (max-width: 1024px) {
+     display: none;
+    }
   }
 }

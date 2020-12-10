@@ -43,13 +43,55 @@ $( document ).ready(function() {
         });
 
     }
-
+    var categorySwiper = new Swiper('.category-page .main-video__nav-slider', {
+        slidesPerView: 4,
+        spaceBetween: 20,
+        pagination: {
+            el: '.category-page .main-video__pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.category-page .main-video__next',
+            prevEl: '.category-page .main-video__prev',
+        },
+        breakpoints: {
+            1024: {
+                slidesPerView: 4,
+            },
+            768: {
+                slidesPerView: 4.3,
+            },
+            600: {
+                slidesPerView: 3,
+            },
+            500: {
+                slidesPerView: 2,
+            },
+            200: {
+                slidesPerView: 1,
+            },
+        },
+    });
     var dealerslider = new Swiper('.dealer-projects .dealer-projects__container', {
         slidesPerView: 3,
         spaceBetween: 50,
         navigation: {
             nextEl: '.dealer-projects .services__next',
             prevEl: '.dealer-projects .services__prev',
+        },
+        breakpoints: {
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 50,
+            },
+            800: {
+                slidesPerView: 3.5,
+                spaceBetween: 10,
+            },
+            320: {
+                slidesPerView: 2.5,
+                spaceBetween: 10,
+            }
         },
     });
 
@@ -69,6 +111,20 @@ $( document ).ready(function() {
         navigation: {
             nextEl: '.dealer-sertificates .services__next',
             prevEl: '.dealer-sertificates .services__prev',
+        },
+        breakpoints: {
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 50,
+            },
+            800: {
+                slidesPerView: 3.5,
+                spaceBetween: 10,
+            },
+            320: {
+                slidesPerView: 2.5,
+                spaceBetween: 10,
+            }
         },
     });
 

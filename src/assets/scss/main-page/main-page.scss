@@ -351,7 +351,7 @@
     &__item {
       min-width: 210px;
       margin: 0;
-      padding: 14px 56px 14px 20px;
+      padding: 10px 56px 10px 20px;
       position: relative;
       display: flex;
       width: auto;
@@ -2528,6 +2528,7 @@
   padding-top: 60px;
   color: white;
   @media all and (max-width: 450px) {
+    border-radius: 10px 10px 0 0 ;
     .container {
       padding: 0;
     }
@@ -2586,8 +2587,9 @@
           justify-content: space-between;
           padding: 0 20px;
           border-top: 1px solid #C4C4C4;
-          font-size: 1.6rem;
-          line-height: 19rem;
+          cursor: pointer;
+          font-size: 16px;
+          line-height: 19px;
 
           &:after {
             content: "";
@@ -2633,6 +2635,19 @@
   &__logo {
     width: 100%;
     height: auto;
+    @media all and (max-width: 400px) {
+      max-height: 49px;
+      a{
+        display: flex;
+        height: 100%;
+        width: auto;
+        img{
+          height: 100%;
+          width: auto;
+          margin: auto;
+        }
+      }
+    }
   }
 
   &__products {
@@ -3137,6 +3152,8 @@
 
         img {
           max-width: 120px;
+          z-index: 1;
+          position: relative;
         }
       }
 
@@ -3441,10 +3458,13 @@
     &__mobile-burger {
       padding: 0;
       width: 26px;
+      height: 44px;
 
       span {
-        margin: 3px 0;
+        margin: 3.5px 0;
+        height: 1px;
         width: 100%;
+        width: 26px;
       }
     }
 
@@ -3458,8 +3478,8 @@
         height: 30px;
 
         img {
-          height: 100%;
-          width: auto;
+          height: auto;
+          width: 57px;
         }
       }
 

@@ -10,7 +10,7 @@
 
 html{
     font-size: 62.5%;
-    @media all and (max-width: 450px) {
+    @media all and (max-width: 400px) {
         font-size: 62.5% !important;
     }
 }
@@ -36,8 +36,8 @@ body {
     padding: $container-padding;
     margin: auto;
     @media all and (max-width: 500px) {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 17px;
+        padding-right: 17px;
     }
 
 }
