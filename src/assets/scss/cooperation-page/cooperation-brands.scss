@@ -2,6 +2,31 @@
   padding: 30px 50px 25px 0;
   position: relative;
   margin-bottom: 20px;
+  @media all and (max-width: 1024px) {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  @media all and (max-width: 900px) {
+    padding-right: 0;
+    padding-top: 0;
+  }
+  .main-brands__pagination{
+    @media all and (max-width: 1024px) {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+  .main-brands__container{
+    @media all and (max-width: 1024px) {
+      margin: 20px 0;
+    }
+    @media all and (max-width: 768px) {
+      margin: 0;
+    }
+    @media all and (max-width: 500px) {
+      padding-right: 17px;
+    }
+  }
   &:before{
     position: absolute;
     top: 0;
@@ -11,6 +36,9 @@
     display: block;
     border-top: 1px solid $orange-color;
     margin-right: -40px;
+    @media all and (max-width: 1024px) {
+      display: none;
+    }
   }
   &:after{
     position: absolute;
@@ -21,6 +49,9 @@
     display: block;
     border-bottom: 1px solid $orange-color;
     margin-right: -40px;
+    @media all and (max-width: 1024px) {
+      display: none;
+    }
   }
   &__title{
     font-size: 20px;

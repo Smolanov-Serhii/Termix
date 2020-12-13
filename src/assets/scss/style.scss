@@ -5,6 +5,7 @@
 @import "animation";
 @import "swiper";
 @import "selectric";
+@import "perfect-scrollbar";
 
 
 
@@ -31,6 +32,9 @@ body {
     line-height: 2.4rem;
 }
 
+.locked{
+    overflow: hidden;
+}
 .container {
     max-width: $container-weight;
     padding: $container-padding;
@@ -46,6 +50,9 @@ body {
     padding: 0 56px 10px 56px;
     border-bottom: 1px solid #E9E9E9;
     margin-top: -10px;
+    @media all and (max-width: 500px) {
+        padding: 0 17px;
+    }
 
     &__list{
         display: flex;

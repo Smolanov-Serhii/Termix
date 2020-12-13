@@ -38,6 +38,11 @@
     padding: 0;
     max-width: 1220px;
     width: calc(100% - 220px);
+    @media all and (max-width: 400px) {
+      margin: 0 0 0 auto;
+      padding: 0;
+      width: calc(100% - 20px);
+    }
   }
   &__wrapper{
 

@@ -3,18 +3,66 @@
   max-width: 858px;
   width: 100%;
   padding: 0;
+  @media all and (max-width: 1024px) {
+    max-width: none;
+    margin: 0 100px;
+    width: auto;
+  }
+  @media all and (max-width: 900px) {
+    max-width: none;
+    margin: 0 40px;
+    width: auto;
+  }
+  @media all and (max-width: 500px) {
+    margin: 50px 17px 50px 17px;
+  }
   &__tabs{
     display: flex;
     justify-content: space-between;
     margin-left: -20px;
     margin-right: -20px;
     border-bottom: 1px solid #828282;
+    @media all and (max-width: 1024px) {
+      margin: 40px 0 0 0 ;
+    }
+    @media all and (max-width: 600px) {
+      overflow: scroll;
+      position: relative;
+      display: inline-flex;
+      padding-bottom: 10px;
+      border-bottom: none;
+      margin-top: 0;
+      width: calc(100% + 34px);
+      margin-left: -17px;
+      margin-right: -17px;
+    }
     &-item{
       cursor: pointer;
       margin-bottom: -1px;
+      border-bottom: 1px solid #828282;
       span{
         font-size: 2rem;
         line-height: 2.4rem;
+        @media all and (max-width: 600px) {
+          display: inline-flex;
+          margin: 0 17px;
+          white-space: nowrap;
+          &:first-child{
+            span{
+              margin-left: 0;
+            }
+          }
+          &:last-child{
+            span{
+              margin-right: 17px;
+            }
+            margin-right: 17px;
+          }
+        }
+        @media all and (max-width: 500px) {
+          font-size: 14px;
+          line-height: 17px;
+        }
       }
       &:hover{
         border-bottom: 1px solid $orange-color;
@@ -34,10 +82,17 @@
   }
   &__content{
     margin-top: 50px;
+    @media all and (max-width: 500px) {
+      margin-top: 20px;
+    }
     &-item{
       font-size: 1.8rem;
       line-height: 2.2rem;
       display: none;
+      @media all and (max-width: 500px) {
+        font-size: 14px;
+        line-height: 17px;
+      }
       &.active{
         display: block;
       }
@@ -49,10 +104,18 @@
         &__title{
           font-size: 1.8rem;
           line-height: 2.2rem;
+          @media all and (max-width: 500px) {
+            font-size: 14px;
+            line-height: 17px;
+          }
         }
         &__value{
           font-size: 1.8rem;
           line-height: 2.2rem;
+          @media all and (max-width: 500px) {
+            font-size: 14px;
+            line-height: 17px;
+          }
         }
         > span{
           flex: 1;

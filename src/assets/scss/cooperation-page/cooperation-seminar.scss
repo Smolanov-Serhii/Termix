@@ -2,6 +2,9 @@
   margin-top: 40px;
   padding-right: 40px;
   margin-bottom: 100px;
+  @media all and (max-width: 500px) {
+    padding-right: 17px;
+  }
   &__title{
     font-size: 2rem;
     line-height: 2.4rem;
@@ -23,35 +26,49 @@
     width: 100%;
     padding-left: 40.5%;
     position: relative;
+    @media all and (max-width: 1150px) {
+      padding-left: 403vw * $px;
+    }
+    @media all and (max-width: 900px) {
+      padding-left: 0;
+    }
   }
   &__slide{
     display: flex;
     margin-bottom: 40px;
+    @media all and (max-width: 500px) {
+      border-radius: 10px;
+      background-color: #F6F6F6;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
     &:last-child{
       margin-bottom: 0;
     }
-    &:first-child{
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 363vw * $px;
-      max-width: 363px;
-      height: auto;
-      flex-direction: column;
-      margin-bottom: 0;
-      .image{
-        height: 368vw * $px;
-        max-height: 368px;
-        max-width: 100%;
-      }
-      .content{
-        margin-left: 0;
-        margin-top: 20px;
-        .excerpt{
-          padding-right: 6rem;
+    @media all and (min-width: 900px) {
+      &:first-child{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 363vw * $px;
+        max-width: 363px;
+        height: auto;
+        flex-direction: column;
+        margin-bottom: 0;
+        .image{
+          height: 368vw * $px;
+          max-height: 368px;
+          max-width: 100%;
         }
-      }
+        .content{
+          margin-left: 0;
+          margin-top: 20px;
+          .excerpt{
+            padding-right: 6rem;
+          }
+        }
 
+      }
     }
     .image{
       width: 100%;
@@ -62,6 +79,15 @@
       height: 164vw * $px;
       max-height: 164px;
       max-width: 252px;
+      @media all and (max-width: 1024px) {
+        max-height: none;
+        height: auto;
+      }
+      @media all and (max-width: 500px) {
+        width: 97vw * $pxm;
+        height: 97vw * $pxm;
+        border-radius: 10px;
+      }
     }
     .triger-new{
       position: absolute;
@@ -80,6 +106,16 @@
       width: 323vw * $px;
       max-width: 323px;
       margin-left: 20px;
+      @media all and (max-width: 900px) {
+        width: 100%;
+        max-width: 100%;
+        padding-bottom: 40px;
+      }
+      @media all and (max-width: 500px) {
+        width: 180vw * $pxm;
+        padding-bottom: 0;
+        margin-left: 10px;
+      }
 
       .name-date{
         display: flex;
@@ -87,10 +123,28 @@
         border-bottom: 1px solid #C4C4C4;
         //padding-top: 20px;
         margin-bottom: 20px;
+        @media all and (max-width: 500px) {
+          margin-bottom: 0;
+        }
         .name, .date{
           font-size: 1.6rem;
           line-height: 1.9rem;
           color: #828282;
+          @media all and (max-width: 500px) {
+            font-size: 12px;
+            line-height: 15px;
+            color: #828282;
+          }
+        }
+        .name{
+          @media all and (max-width: 500px) {
+            display: none;
+          }
+        }
+        @media all and (max-width: 500px) {
+          order: 1;
+          border-bottom: none;
+          margin-top: 10px;
         }
       }
       .title{
@@ -98,6 +152,12 @@
         line-height: 1.9rem;
         color: #4F4F4F;
         font-family: ProximaNova-Bold;
+        @media all and (max-width: 500px) {
+          order: 0;
+          font-size: 16px;
+          line-height: 19px;
+          color: #4F4F4F;
+        }
       }
       .excerpt{
         margin-top: 10px;
@@ -105,6 +165,17 @@
         line-height: 1.9rem;
         color: #828282;
         padding-right: 11rem;
+        @media all and (max-width: 1400px) {
+          padding-right: 0;
+          padding-bottom: 20px;
+        }
+        @media all and (max-width: 1024px) {
+          padding-right: 0;
+        }
+        @media all and (max-width: 500px) {
+          display: none;
+          padding-bottom: 0;
+        }
       }
       .permalink{
         text-decoration: none;
@@ -122,6 +193,9 @@
           color: #F4A343;
           display: flex;
           align-items: center;
+          @media all and (max-width: 500px) {
+            display: none;
+          }
           svg{
             margin-left: 10px;
           }

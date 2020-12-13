@@ -1,5 +1,8 @@
 .cooperation-conditions{
   padding-right: 40px;
+  @media all and (max-width: 500px) {
+    padding-right: 0;
+  }
   &__title{
     font-size: 20px;
     line-height: 24px;
@@ -14,26 +17,63 @@
     font-size: 1.6rem;
     line-height: 150%;
     color: #828282;
+    @media all and (max-width: 500px) {
+      font-size: 16px;
+      line-height: 150%;
+    }
   }
   &__brick{
     display: flex;
     flex-wrap: wrap;
     margin-top: 40px;
     margin-bottom: 25px;
+    @media all and (max-width: 768px) {
+      justify-content: flex-start;
+    }
+    @media all and (max-width: 650px) {
+      flex-direction: column;
+    }
+    @media all and (max-width: 500px) {
+      padding: 0 0 0 20px;
+    }
     &-item{
       width: calc(100% / 3);
       padding: 10px 35px 10px 50px;
       justify-content: flex-start;
       display: flex;
       align-items: center;
+      @media all and (max-width: 768px) {
+        width: 50%;
+        border: none!important;
+        padding-left: 0!important;
+        justify-content: flex-start!important;
+      }
+      @media all and (max-width: 650px) {
+        width: 100% !important;
+      }
+      @media all and (max-width: 500px) {
+        margin-bottom: 30px;
+        padding-right: 0;
+        &:last-child{
+          margin-bottom: 20px;
+        }
+      }
       .image{
         margin-right: 20px;
+        @media all and (max-width: 650px) {
+          min-width: 60px;
+        }
       }
       span{
         font-family: Roboto-Bold;
         color: #4F4F4F;
         font-size: 1.4rem;
         line-height: 150%;
+        @media all and (max-width: 500px) {
+          font-size: 14px;
+          line-height: 150%;
+          color: #4F4F4F;
+        }
       }
       &:nth-child(1), &:nth-child(2), &:nth-child(4){
         border-right: 1px solid #DBDBDB;
@@ -53,6 +93,12 @@
   }
   &__dealer{
     margin-top: 25px;
+    @media all and (max-width: 900px) {
+      width: calc(100% + 17px);
+      margin-left: -17px;
+      margin-right: -17px;
+    }
+
   }
   &__dealer-header{
     background-color: $orange-color;
@@ -65,29 +111,62 @@
     align-items: center;
     padding: 26px;
     position: relative;
+    @media all and (max-width: 500px) {
+      font-size: 20px;
+      line-height: 24px;
+      color: #333333;
+      padding: 15px 30px 15px 17px;
+    }
   }
   &__dealer-content{
     margin-top: -10px;
     background-color: #F9F9F9;
     padding: 43px 40px 20px 40px;
     margin-bottom: 50px;
+    @media all and (max-width: 650px) {
+      margin-bottom: 0;
+    }
+    @media all and (max-width: 500px) {
+      padding: 20px 17px 20px 17px;
+      background-color: #F9F9F9;
+      margin-bottom: 40px;
+    }
   }
   &__dealer-desc{
     font-size: 1.6rem;
     line-height: 150%;
     text-align: justify;
     color: #828282;
+    @media all and (max-width: 500px) {
+      font-size: 16px;
+      line-height: 150%;
+      text-align: justify;
+      color: #828282;
+    }
   }
   &__dealer-list{
     padding-top: 50px;
     display: flex;
     flex-wrap: wrap;
+    @media all and (max-width: 650px) {
+      flex-direction: column;
+      padding-top: 0;
+    }
   }
   &__dealer-item{
     width: 50%;
     margin: 25px 0;
     display: flex;
     align-items: center;
+    @media all and (max-width: 650px) {
+      width: 100%;
+    }
+    @media all and (max-width: 500px) {
+      margin: 20px 0;
+      &:last-child{
+        margin-bottom: 0px;
+      }
+    }
     img{
       margin-right: 20px;
     }
@@ -96,6 +175,11 @@
       line-height: 150%;
       color: #4F4F4F;
       font-family: ProximaNova-Bold;
+      @media all and (max-width: 500px) {
+        font-size: 16px;
+        line-height: 150%;
+        color: #4F4F4F;
+      }
     }
   }
   &__dealer-form{
@@ -103,6 +187,9 @@
     border-radius: 10px;
     padding: 30px 20px 30px 20px;
     margin-bottom: 20px;
+    @media all and (max-width: 500px) {
+      padding: 20px 17px;
+    }
     .form-title{
       font-size: 2rem;
       line-height: 130%;
@@ -115,10 +202,23 @@
       line-height: 1.9rem;
       color: #4F4F4F;
       margin-bottom: 40px;
+      @media all and (max-width: 500px) {
+        font-size: 16px;
+        line-height: 19px;
+        color: #4F4F4F;
+        margin-bottom: 20px;
+      }
     }
     form{
       display: flex;
       justify-content: center;
+      @media all and (max-width: 900px) {
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      @media all and (max-width: 500px) {
+        flex-direction: column;
+      }
       input{
         height: 56px;
         width: 300vw * $px;
@@ -131,6 +231,14 @@
         font-size: 1.6rem;
         line-height: 1.9rem;
         color: #AAA3A3;
+        @media all and (max-width: 900px) {
+          width: calc(50% - 10px);
+          max-width: none;
+          margin: 0 0 20px 0;
+        }
+        @media all and (max-width: 500px) {
+          width: 100%;
+        }
         &::placeholder{
           font-size: 1.6rem;
           line-height: 1.9rem;
@@ -151,6 +259,15 @@
         flex: 1;
         color: #FFFFFF;
         margin-left: 20px;
+        @media all and (max-width: 900px) {
+          width: 100%;
+          flex: none;
+          margin-left: 0;
+          height: 56px;
+        }
+        @media all and (max-width: 500px) {
+          margin-top: 20px;
+        }
       }
     }
   }

@@ -1,10 +1,6 @@
 .cooperation{
   .about-company__wrapper{
     margin-bottom: 80px;
-    .about-company__desc{
-      padding-right: 40px;
-      border-right: 1px solid $orange-color;
-    }
   }
   .main-brands__container{
     margin: 20px 104px;
@@ -15,6 +11,9 @@
   }
 }
 .cooperation-about{
+  @media all and (max-width: 900px) {
+    padding-right: 0;
+  }
   &__title{
     position: relative;
     z-index: 2;
@@ -22,6 +21,14 @@
     margin-left: 50px;
     font-size: 3.6rem;
     line-height: 4.4rem;
+    @media all and (max-width: 1024px) {
+      margin: 20px 0;
+    }
+    @media all and (max-width: 500px) {
+      font-size: 20px;
+      line-height: 24px;
+      color: #33353D;
+    }
   }
   &__subtitle{
     z-index: -1;
@@ -33,6 +40,12 @@
     display: flex;
     margin-top: 50px;
     justify-content: space-between;
+    @media all and (max-width: 1150px) {
+      flex-direction: column;
+    }
+    @media all and (max-width: 500px) {
+      margin-top: 0;
+    }
     .cooperation-about__title{
       font-size: 20px;
       line-height: 24px;
@@ -42,6 +55,13 @@
       padding-left: 0;
       margin-left: 0;
       margin-bottom: 20px;
+      @media all and (max-width: 500px) {
+        font-size: 16px;
+        line-height: 19px;
+        color: #33353D;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
     }
     .about-company__content{
       margin-top: 0;
@@ -50,6 +70,11 @@
         line-height: 150%;
         text-align: justify;
         color: #828282;
+        @media all and (max-width: 500px) {
+          font-size: 16px;
+          line-height: 150%;
+          color: #828282;
+        }
       }
     }
     .about-company__wrapper{
@@ -57,9 +82,24 @@
       display: flex;
       justify-content: space-between;
       padding: 0 0 30px 0;
+      @media all and (max-width: 900px) {
+        margin-bottom: 0;
+      }
     }
     .about-company__desc{
       width: 525vw * $px;
+      padding-right: 40px;
+      border-right: 1px solid $orange-color;
+      @media all and (max-width: 1150px) {
+        width: 100%;
+        border-right: none;
+      }
+      @media all and (max-width: 768px) {
+        padding-right: 40px;
+      }
+      @media all and (max-width: 500px) {
+        padding-right: 17px;
+      }
     }
     .about-company__video{
       width: 454vw * $px;
@@ -69,6 +109,15 @@
       max-height: 353px;
       min-width: auto;
       min-height: auto;
+      @media all and (max-width: 1150px) {
+        margin: 20px auto 20px 0;
+      }
+      @media all and (max-width: 768px) {
+        width: 100%;
+        height: 45.06vw;
+        min-height: 178px;
+        margin-top: 40px;
+      }
     }
   }
   &__sidebar{
@@ -79,6 +128,15 @@
     flex-direction: column;
     position: sticky;
     top: 40px;
+    @media all and (max-width: 1150px) {
+      flex-direction: row;
+      &-item{
+        margin-right: 20px;
+      }
+    }
+    @media all and (max-width: 768px) {
+      display: none;
+    }
   }
   &__nav-item{
     border-bottom: 1px solid transparent;
@@ -109,5 +167,12 @@
   &__content{
     width: calc(100% - 280px);
     padding-left: 40px;
+    @media all and (max-width: 1200px) {
+      width: calc(100% - 190px);
+    }
+    @media all and (max-width: 1150px) {
+      width: 100%;
+      padding-left: 0;
+    }
   }
 }
