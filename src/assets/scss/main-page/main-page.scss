@@ -2716,7 +2716,9 @@
     @media all and (max-width: 1320px) {
       flex-wrap: wrap;
     }
-
+    @media all and (max-width: 900px) {
+      padding: 0 40px 10px 40px;
+    }
     > div {
       padding: 0;
       @media all and (max-width: 1320px) {

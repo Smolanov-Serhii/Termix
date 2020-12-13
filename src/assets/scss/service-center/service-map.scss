@@ -1,5 +1,9 @@
 .service-map{
   margin-bottom: 100px;
+  @media all and (max-width: 500px) {
+    padding: 0;
+    height: 158vw * $pxm;
+  }
   &__content{
     width: 100%;
     height: 100%;

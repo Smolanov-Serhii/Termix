@@ -3509,6 +3509,9 @@ body {
     @media all and (max-width: 1320px) {
       .footer__container {
         flex-wrap: wrap; } }
+    @media all and (max-width: 900px) {
+      .footer__container {
+        padding: 0 40px 10px 40px; } }
     .footer__container > div {
       padding: 0; }
       @media all and (max-width: 1320px) {
@@ -6056,11 +6059,23 @@ body {
 
 .service-center-desc {
   margin-top: 80px; }
+  @media all and (max-width: 900px) {
+    .service-center-desc {
+      margin-top: 20px; }
+      .service-center-desc .about-company__wrapper {
+        padding: 0; }
+        .service-center-desc .about-company__wrapper .about-company__content {
+          margin-top: 0; }
+        .service-center-desc .about-company__wrapper .about-company__desc {
+          margin-bottom: 40px; } }
   .service-center-desc__title {
     position: relative;
     z-index: 2;
     margin-left: 50px;
     margin-bottom: 30px; }
+    @media all and (max-width: 900px) {
+      .service-center-desc__title {
+        margin-left: 0; } }
   .service-center-desc__subtitle {
     position: absolute;
     top: -53px;
@@ -6279,6 +6294,10 @@ body {
 
 .service-map {
   margin-bottom: 100px; }
+  @media all and (max-width: 500px) {
+    .service-map {
+      padding: 0;
+      height: 42.1228vw; } }
   .service-map__content {
     width: 100%;
     height: 100%;

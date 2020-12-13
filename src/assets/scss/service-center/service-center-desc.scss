@@ -1,10 +1,25 @@
 .service-center-desc{
   margin-top: 80px;
+  @media all and (max-width: 900px) {
+    margin-top: 20px;
+    .about-company__wrapper{
+      padding: 0;
+      .about-company__content{
+        margin-top: 0;
+      }
+      .about-company__desc{
+        margin-bottom: 40px;
+      }
+    }
+  }
   &__title{
     position: relative;
     z-index: 2;
     margin-left: 50px;
     margin-bottom: 30px;
+    @media all and (max-width: 900px) {
+      margin-left: 0;
+    }
 
   }
   &__subtitle{
