@@ -1,9 +1,18 @@
 .zakaz-service{
   padding-top: 40px;
   margin-bottom: 80px;
+  @media all and (max-width: 500px) {
+    padding: 0;
+  }
   &__title{
     position: relative;
     z-index: 2;
+    .title-form{
+      margin-left: 17px;
+      margin-right: 17px;
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
   &__subtitle{
     position: absolute;
@@ -22,14 +31,24 @@
     padding: 40px 40px 40px 40px;
     background-color: #33353D;
     border-radius: 10px;
+    @media all and (max-width: 500px) {
+      padding: 20px 17px;
+      margin-top: 20px;
+    }
     form{
       display: flex;
       justify-content: space-between;
+      @media all and (max-width: 768px) {
+        flex-direction: column;
+      }
     }
     &-group{
       width: calc(50% - 20px);
       display: flex;
       flex-direction: column;
+      @media all and (max-width: 768px) {
+        width: 100%;
+      }
       .form-item{
         display: flex;
         flex-direction: column;
@@ -42,6 +61,11 @@
           font-weight: 100;
           padding-left: 20px;
           margin-bottom: 1rem;
+          @media all and (max-width: 500px) {
+            padding-left: 17px;
+            font-size: 16px;
+            line-height: 19px;
+          }
         }
         .selectric .label{
           font-family: ProximaNova-Regular;
@@ -52,6 +76,12 @@
           align-items: center;
           margin: 0;
           padding: 2.9rem 2rem;
+          @media all and (max-width: 500px) {
+            font-size: 16px;
+            line-height: 19px;
+            color: #000000;
+            padding: 28px 10px;
+          }
         }
         .selectric{
           .button{
@@ -93,10 +123,19 @@
           box-shadow: 1px 4px 20px rgba(0, 0, 0, 0.1);
           border-radius: 3px;
           border: none;
+          @media all and (max-width: 500px) {
+            font-size: 16px;
+            line-height: 19px;
+            color: #000000;
+            padding: 20px 10px;
+          }
         }
         textarea{
           resize: none;
           height: 16.5rem;
+          @media all and (max-width: 500px) {
+            height: 158px;
+          }
         }
         &-btn{
           width: calc(100% - 184px);
@@ -113,6 +152,9 @@
           margin: auto;
           filter: drop-shadow(1px 1px 20px rgba(244, 163, 67, 0.5));
           border-radius: 3px;
+          @media all and (max-width: 768px) {
+            width: 100%;
+          }
         }
       }
     }
